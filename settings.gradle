@@ -1,1 +1,1 @@
-include ':app', ':updateapk', ':onecode'
+include ':onecode'
