@@ -1,4 +1,4 @@
-package com.csii.android.myapplication
+package com.csii.android.myapplication.base_knowledge
 
 import android.app.Activity
 import android.content.Intent
@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.csii.android.myapplication.BaseActivity
+import com.csii.android.myapplication.R
 
 class MainActivity : BaseActivity() {
 
@@ -23,7 +25,7 @@ class MainActivity : BaseActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId){
-            R.id.jump_one -> startActivity(Intent(this,JumpActivity::class.java))
+            R.id.jump_one -> startActivity(Intent(this, JumpActivity::class.java))
             R.id.jump_two -> startActivity(Intent("com.csii.android.myapplication.ACTION_START"))
             R.id.jump_three -> startActivity(Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://www.baidu.com")))
             R.id.jump_four -> sendData()
@@ -34,7 +36,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun sendData(){
-        val intent = Intent(this,JumpActivity::class.java)
+        val intent = Intent(this, JumpActivity::class.java)
         val bundle = Bundle()
         bundle.putString("name","MainActivity类")
         intent.putExtras(bundle)
@@ -42,7 +44,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun sendDataForResult(){
-        val intent = Intent(this,JumpActivity::class.java)
+        val intent = Intent(this, JumpActivity::class.java)
         val bundle = Bundle()
         bundle.putString("name","MainActivity类")
         intent.putExtras(bundle)

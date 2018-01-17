@@ -1,10 +1,13 @@
-package com.csii.android.myapplication
+package com.csii.android.myapplication.base_knowledge
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.csii.android.myapplication.ActivityTask
+import com.csii.android.myapplication.BaseActivity
+import com.csii.android.myapplication.R
 import kotlinx.android.synthetic.main.activity_jump.*
 
 class JumpActivity : BaseActivity() {
@@ -22,7 +25,7 @@ class JumpActivity : BaseActivity() {
             val name:String = bundle.getString("name")
             Toast.makeText(this,name,Toast.LENGTH_SHORT).show()
 
-            Log.e("HAT",ActivityTask.currentActivity()?.localClassName)
+            Log.e("HAT", ActivityTask.currentActivity()?.localClassName)
         }
 
         go_back.setOnClickListener {
@@ -38,7 +41,7 @@ class JumpActivity : BaseActivity() {
 
         remove_one.setOnClickListener {
             ActivityTask.popActivity(this)
-            Log.e("HAT",ActivityTask.currentActivity()?.localClassName)
+            Log.e("HAT", ActivityTask.currentActivity()?.localClassName)
 
         }
     }
