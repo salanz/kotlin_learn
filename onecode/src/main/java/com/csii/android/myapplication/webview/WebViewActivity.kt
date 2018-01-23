@@ -1,5 +1,4 @@
-package com.csii.android.updateapk.wview
-
+package com.csii.android.myapplication.webview
 import android.annotation.TargetApi
 import android.graphics.Bitmap
 import android.net.http.SslError
@@ -13,7 +12,6 @@ import android.view.View
 import android.webkit.*
 import android.widget.Toast
 import com.csii.android.myapplication.R
-import com.csii.android.myapplication.webview.NetWorkUtil
 import kotlinx.android.synthetic.main.activity_web_view.*
 import kotlinx.android.synthetic.main.error_pager.*
 
